@@ -18,23 +18,23 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @EntityListeners(AuditingEntityListener.class)
-public class Producto {
+public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String nombre;
+    private String name;
 
-    private String cantidad;
+    private String cant;
 
-    private String unidadMedida;
+    private String unitMeasurement;
 
-    private double precio;
+    private double price;
 
     private int stock;
 
-    private String laboratorio;
+    private String laboratory;
 
     private boolean estado;
 

@@ -5,18 +5,16 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Access;
-
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 @Data
-public class ProductoPresenter {
+public class ProductPresenter {
     private Long id;
-    private String nombre;
-    private String cantidad;
-    private String unidadMedida;
-    private double precio;
+    private String name;
+    private String cant;
+    private String unitMeasurement;
+    private double price;
     private int stock;
-    private String laboratorio;
+    private String laboratory;
 }
