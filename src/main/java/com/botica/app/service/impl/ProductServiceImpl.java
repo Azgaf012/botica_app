@@ -26,18 +26,18 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Product findByName(String nombre) {
-        return productRepository.findByNombre(nombre);
+        return productRepository.findByName(nombre);
     }
 
     @Override
     public List<Product> productsList() {
-        return productRepository.findByEstadoTrue();
+        return productRepository.findByStateTrue();
     }
 
     @Override
     public void delete(long id) {
         Product product = this.findById(id);
-        product.setEstado(false);
+        product.setState(false);
         productRepository.save(product);
     }
 
@@ -50,7 +50,7 @@ public class ProductServiceImpl implements ProductService {
         productDB.setPrice(product.getPrice());
         productDB.setStock(product.getStock());
         productDB.setLaboratory(product.getLaboratory());
-        productDB.setEstado(product.isEstado());
+        productDB.setState(product.isState());
         return productRepository.save(productDB);
     }
 

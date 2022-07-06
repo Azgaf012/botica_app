@@ -33,7 +33,7 @@ public class UserServiceImpl  implements UserService {
 
     @Override
     public void addRoleToUser(String username, String rolename) {
-        User user = userRepository.findByUserName(username);
+        User user = userRepository.findByName(username);
         Role role = roleRepository.findByName(rolename);
         user.getRoles().add(role);
         userRepository.save(user);
@@ -41,7 +41,7 @@ public class UserServiceImpl  implements UserService {
 
     @Override
     public User getUser(String username) {
-        return userRepository.findByUserName(username);
+        return userRepository.findByName(username);
     }
 
     @Override

@@ -36,12 +36,12 @@ public class Product {
 
     private String laboratory;
 
-    private boolean estado;
+    private boolean state;
 
     @CreatedDate
-    private Date fechaCreacion;
+    private Date created;
 
     @LastModifiedDate
-    private Date fechaActualizacion;
+    private Date updated;
 
 }
