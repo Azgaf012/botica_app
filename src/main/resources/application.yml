@@ -12,3 +12,9 @@ spring:
     url: jdbc:postgresql://localhost:5432/botica
     username: postgres
     password: example
+
+jwt:
+  auth:
+    app: Spring-Security-app
+    secret_key: botica#secret@123
+    expires_in: 3600
