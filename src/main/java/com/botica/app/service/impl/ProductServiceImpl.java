@@ -56,6 +56,8 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Product save(Product product) {
+        product.setStock(0);
+        product.setState(true);
         return productRepository.save(product);
     }
 
